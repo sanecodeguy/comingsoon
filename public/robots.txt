@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://contagion.dev/sitemap.xml
