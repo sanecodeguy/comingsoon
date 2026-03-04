@@ -26,11 +26,11 @@ function App() {
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
-    padding: '2rem',
+    padding: '1rem',
   };
 
   const textStyle: React.CSSProperties = {
-    fontSize: '15vw',
+    fontSize: 'clamp(3rem, 15vw, 12rem)', // Responsive font size
     fontWeight: 900,
     letterSpacing: '-0.05em',
     userSelect: 'none',
@@ -40,7 +40,11 @@ function App() {
     backgroundClip: 'text',
     color: 'transparent',
     animation: `${fadeClass === 'fade-in' ? 'fadeIn 1s ease-in-out' : 'fadeOut 0.5s ease-in-out'}, shine 3s linear infinite`,
-    marginBottom: '3rem',
+    marginBottom: '2rem',
+    textAlign: 'center',
+    whiteSpace: 'nowrap', // Force single line
+    maxWidth: '100vw',
+    padding: '0 0.5rem',
   };
 
   // Smaller GitHub card
@@ -53,6 +57,7 @@ function App() {
     padding: '1.2rem',
     boxShadow: '0 8px 20px -8px rgba(255,255,255,0.1)',
     transition: 'transform 0.3s ease, border-color 0.3s ease',
+    margin: '0 1rem',
   };
 
   const githubHeaderStyle: React.CSSProperties = {
